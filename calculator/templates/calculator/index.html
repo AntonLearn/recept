@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Рецепт приготовления {{ header }}</title>
+</head>
+<body>
+    <h1>Рецепт приготовления {{ header }} на {{ servings }} порций:</h1>
+{% for ingredient, amount in recipe_servings.items %}
+    <p>{{ ingredient }}: {{ amount }}</p>
+{% empty %}
+    <p>Такого рецепта не знаю :(</p>
+{% endfor %}
+</body>
+</html>
